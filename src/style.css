@@ -4,17 +4,19 @@
 *:focus {
     outline: 0;
 }
-
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto Flex', sans-serif;
     font-size: 1.5em;
     user-select:none;
-    background-color: white;
     width:100vw;
     height:100vh;
-    background-color: cadetblue;
+    background-color: #0D1117;
+    color:white;
 }
 .App{
     display: flex;
@@ -31,8 +33,7 @@ body{
 }
 .searchBar{
     border-radius: 10px;
-    width: 35%;
-    background-color: white;
+    width: 38%;
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -40,19 +41,65 @@ body{
 .searchInput{
     height:auto;
     border-radius: 10px;
-    width: 72.5%;
+    width: 65.5%;
     font-size: 1em;
     border: none;
     margin: 0;
-
+    border:1px solid #59595a;
+    background-color: #0D1117;
+    color:white;
+    padding: 20px;
 }
 .searchButton{
     border-radius: 10px;
     width: 22.5%;
     border: none;
-    background-color: cadetblue;
+    background-color: #0D1117;
     font-size: 0.75em;
     font-weight: 600;
+    color:white;
+    border:1px solid #59595a;
 }
 .Main{
+    padding: 10px;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 10px;
+    width: 35%;
+    /* background-color: white;  */
+    display: flex;
+
+}
+.userImage{
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+    border:1px solid rgb(204, 204, 204);
+}
+.mainData{
+    padding-left: 20px;
+}
+.Main h1{
+    font-size: 1em;
+    
+}
+.Main h3{
+    font-size: 0.8em;
+    padding: 0 5px;
+    font-weight: 500;
+}
+.Main p{
+    font-size: 0.65em;
+    padding: 5px;
+}
+.DisplayRepoData{
+    padding: 10px;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 10px;
+    width: 35%;
+    /* background-color: white;   */
+    display: flex;
+    flex-direction: column;
+
 }
