@@ -4,26 +4,38 @@ import {BiLink} from "react-icons/bi"
 import {FiTwitter, FiUsers} from "react-icons/fi"
 import {MdPeopleAlt} from "react-icons/md"
 import {BsDot} from "react-icons/bs"
+import DisplayRepoData from "./DisplayRepoData"
 
 export default function Main(props) {
 let user=props.info
     return (
-      <div className="Main">
-        <img alt="profileImage" className="userImage" src={props.info.avatar_url} ></img>
-        
-        <div className="mainUserData">
-          <h1 className="name">{user.name}</h1>
-          <h3 className="username">{user.login}</h3>
-          <p className="bio">{user.bio}</p>
-          <p className="userDataDesc"><AiFillGithub className="userDataIcon" />{user.html_url}</p>
-          {user.location ? <p className="userDataDesc"><IoLocationSharp className="userDataIcon" />{user.location}</p>:""}
-          {user.blog ? <p className="userDataDesc"><BiLink className="userDataIcon" />{user.blog}</p> : ""}
-          {user.twitter_username ? <p className="userDataDesc"><FiTwitter className="userDataIcon" />{user.twitter_username}</p>: ""}
-          <p className="userDataDesc"><MdPeopleAlt className="userDataIcon" />{user.followers} followers <BsDot /> {user.following} following </p>
-          <button className="showRepo">Show Repositories</button>
-        </div>
+     
+      <div >
+        {user.name ? (
+        <div className="Main">  
+          <img alt="profileImage" className="userImage" src={props.info.avatar_url} ></img>
+          <div className="mainUserData">
+            <h1 className="name">{user.name}</h1>
+            <h3 className="username">{user.login}</h3>
+            <p className="bio">{user.bio}</p>
+            <p className="userDataDesc"><AiFillGithub className="userDataIcon" />{user.html_url}</p>
+            {user.location ? <p className="userDataDesc"><IoLocationSharp className="userDataIcon" />{user.location}</p>:""}
+            {user.blog ? <p className="userDataDesc"><BiLink className="userDataIcon" />{user.blog}</p> : ""}
+            {user.twitter_username ? <p className="userDataDesc"><FiTwitter className="userDataIcon" />{user.twitter_username}</p>: ""}
+            <p className="userDataDesc"><MdPeopleAlt className="userDataIcon" />{user.followers} followers <BsDot /> {user.following} following </p>
+            <button className="showRepo" onClick={props.getUserRepo}>{props.isRepoButtonClicked ? "Hide Repositories": "Show Repositories"}</button>
+          </div>
 
-      </div>
+          {props.isRepoButtonClicked ? <DisplayRepoData info={props.repoData} />:""}
+        </div>
+        )
+        :
+        <div className="Main">
+        <h1 className="name">No Repository found</h1>
+        </div>
+        }
+      </div> 
+      
     );
   }
   

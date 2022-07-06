@@ -1,20 +1,21 @@
 import Main from "./Main"
 import Search from "./Search";
 import React from "react"
-import DisplayRepoData from "./DisplayRepoData";
 
 
 function App() {
   let [searchText,updatesearchText]=React.useState("")
   let [userData,setUserData]=React.useState("igaganpreet")
   let [repoData, setRepoData]=React.useState("")
+  let [isRepoButtonClicked, toggleIsRepoButtonClicked]=React.useState(false)
+
   const fetchData = (user) => {
     return fetch(`https://api.github.com/users/${user}`)
       .then((response) => response.json())
       .then((data) => setUserData(data));
   }
   const fetchRepoData = (user) => {
-    return fetch(`https://api.github.com/users/${user}/repos`)
+    return fetch(`https://api.github.com/users/${user}/repos?q=addClass+user:mozilla&per_page=100`)
       .then((response) => response.json())
       .then((data) => setRepoData(data));
   }
@@ -28,9 +29,12 @@ function App() {
   }
   function searchUser(){
     fetchData(searchText)
+    toggleIsRepoButtonClicked(false)
   }
   function getUserRepo(){
-    fetchRepoData(searchText)
+    console.log("clicked")
+    fetchRepoData(userData.login)
+    toggleIsRepoButtonClicked((prev)=>!prev)
   }
   return (
     <div className="App">
@@ -40,8 +44,10 @@ function App() {
           // getUserRepo={getUserRepo}
            />
       <Main 
-          info={userData} />
-        {/* <DisplayRepoData info={repoData}/> */}
+          info={userData}
+          getUserRepo={getUserRepo}
+          isRepoButtonClicked={isRepoButtonClicked}
+          repoData={repoData} />
     </div>
   );
 }

@@ -117,15 +117,8 @@ body{
     margin-top:15px;
     padding: 10px;
 }
-
-
-/* .DisplayRepoData{
-    padding: 10px;
-    margin: auto;
-    margin-top: 1%;
-    border-radius: 10px;
-    width: 35%;
+.DisplayRepoData{
     display: flex;
     flex-direction: column;
 
-} */
+}
