@@ -65,41 +65,67 @@ body{
     margin: auto;
     margin-top: 1%;
     border-radius: 10px;
-    width: 35%;
-    /* background-color: white;  */
+    width: 38%;
     display: flex;
-
 }
 .userImage{
+    margin: auto;
     border-radius: 50%;
-    height: 5em;
-    width: 5em;
+    height: 7em;
+    width: 7em;
     border:1px solid rgb(204, 204, 204);
 }
-.mainData{
+.mainUserData{
     padding-left: 20px;
 }
-.Main h1{
+.name{
+    color: #C9D1D9;
     font-size: 1em;
-    
+    font-weight: 600;
 }
-.Main h3{
+.username{
+    color: #59595a;
     font-size: 0.8em;
-    padding: 0 5px;
-    font-weight: 500;
+    font-weight: 300;
+    padding-bottom: 15px;
 }
-.Main p{
+.bio{
+    color: #C9D1D9;
     font-size: 0.65em;
-    padding: 5px;
+    padding-bottom: 15px;
 }
-.DisplayRepoData{
+.userDataDesc{
+    font-size: 0.65em;
+    color: #C9D1D9;
+    padding-bottom: 5px;
+}
+
+.userDataIcon{
+    padding-right: 15px;
+    color: #C9D1D9;
+}
+.showRepo{
+    height:auto;
+    border-radius: 10px;
+    width: 80%;
+    border: none;
+    background-color: #21262D;
+    font-size: 0.65em;
+    font-weight: 600;
+    color:white;
+    border:1px solid #59595a;
+    margin-top:15px;
+    padding: 10px;
+}
+
+
+/* .DisplayRepoData{
     padding: 10px;
     margin: auto;
     margin-top: 1%;
     border-radius: 10px;
     width: 35%;
-    /* background-color: white;   */
     display: flex;
     flex-direction: column;
 
-}
+} */
