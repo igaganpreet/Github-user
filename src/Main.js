@@ -12,7 +12,8 @@ let user=props.info
      
       <div >
         {user.name ? (
-        <div className="Main">  
+        <div className="Main" style={{margin:(props.isRepoButtonClicked) ? "1% 3%" : "auto"}}>  
+        {/* <div className="Main" >  */}
           <img alt="profileImage" className="userImage" src={props.info.avatar_url} ></img>
           <div className="mainUserData">
             <h1 className="name">{user.name}</h1>
@@ -31,7 +32,7 @@ let user=props.info
         )
         :
         <div className="Main">
-        <h1 className="name">No Repository found</h1>
+        <h1 className="name">No such user found</h1>
         </div>
         }
       </div> 

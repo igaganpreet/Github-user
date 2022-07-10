@@ -14,10 +14,9 @@ let displayRepos=data.map((item)=>{
 })
     return (
       <div className="DisplayRepoData">
-        <h3>{props.info.name}</h3>
-        <p>{props.info.html_url}</p>
+<div>Repos</div>
         {displayRepos}
-        
+      
       </div>
     );
   }

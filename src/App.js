@@ -29,11 +29,11 @@ function App() {
   }
   function searchUser(){
     fetchData(searchText)
+    console.log(userData)
     toggleIsRepoButtonClicked(false)
+    fetchRepoData(searchText)
   }
   function getUserRepo(){
-    console.log("clicked")
-    fetchRepoData(userData.login)
     toggleIsRepoButtonClicked((prev)=>!prev)
   }
   return (
@@ -41,7 +41,7 @@ function App() {
       <Search 
           searchUser={searchUser}
           getSearchVal={getSearchVal}
-          // getUserRepo={getUserRepo}
+          isRepoButtonClicked={isRepoButtonClicked}
            />
       <Main 
           info={userData}

@@ -29,7 +29,6 @@ body{
     height: 2.7em;
     width: 100%;
     justify-content: center;
-    margin-top: 6%;
 }
 .searchBar{
     border-radius: 10px;
@@ -66,6 +65,7 @@ body{
     margin-top: 1%;
     border-radius: 10px;
     width: 38%;
+    max-height: 50vh;
     display: flex;
 }
 .userImage{
