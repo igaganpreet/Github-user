@@ -16,7 +16,7 @@ body{
     width:100vw;
     height:100vh;
     background-color: #0D1117;
-    color:white;
+    color: #C9D1D9;
 }
 .App{
     display: flex;
@@ -67,6 +67,11 @@ body{
     width: 38%;
     max-height: 50vh;
     display: flex;
+
+}
+.MainDisplay{
+    display: flex;
+    flex-direction: row;
 }
 .userImage{
     margin: auto;
@@ -79,6 +84,7 @@ body{
     padding-left: 20px;
 }
 .name{
+    padding-top: 10px;
     color: #C9D1D9;
     font-size: 1em;
     font-weight: 600;
@@ -101,24 +107,79 @@ body{
 }
 
 .userDataIcon{
-    padding-right: 15px;
+    padding-right: 10px;
     color: #C9D1D9;
 }
 .showRepo{
     height:auto;
     border-radius: 10px;
-    width: 80%;
+    width: 65%;
     border: none;
     background-color: #21262D;
     font-size: 0.65em;
     font-weight: 600;
     color:white;
     border:1px solid #59595a;
-    margin-top:15px;
+    margin-top:1%;
     padding: 10px;
 }
 .DisplayRepoData{
     display: flex;
     flex-direction: column;
+    margin-left: 4%;
+}
+.repoComponent{
+    padding: 10px;
+}
+.repoDetail{
+    display: flex;
+}
+.repoNumber,
+.repoName{
+    padding: 3px;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.repoUrl{
+    padding: 3px;
+    font-size: 0.65em;
+    font-weight: 300;
+}
+.repoUrl a{
+    color: #53A6FF;
+}
+
+@media screen and (max-width: 480px) {
+    *{
+        overflow-x: hidden;
+    }
+    .searchBar{
+        width: 80%;
+    }
+    .searchInput{
+        width: 50%;
+    }
+    .searchInput::placeholder{
+        font-size: 0.8em;
+    }
+    .searchButton{
+        width: 30%;
+    }
+    .userImage{
+        height: 5em;
+        width: 5em;
+    }
+    .Main{
+        width: 100%;
+    }
+    .MainDisplay{
+        flex-direction: column;
+    }
+    .showRepo{
+        width: 85%;
+    }
+    .DisplayRepoData{
+        margin-top: 10px;
+    }
 
 }
