@@ -35,7 +35,7 @@ let mainMargin=(width>480)?calcMargin: "0%"
         </div>
         )
         :
-<div className="MainDisplay">
+        <div className="MainDisplay">
             <div className="Main" style={{margin:mainMargin}}>
               <img alt="profileImage" className="userImage" src="" ></img>
               <div className="mainUserData">
@@ -47,6 +47,8 @@ let mainMargin=(width>480)?calcMargin: "0%"
                 {user.blog ? <p className="userDataDesc"><BiLink className="userDataIcon" />""</p> : ""}
                 {user.twitter_username ? <p className="userDataDesc"><FiTwitter className="userDataIcon" />{user.twitter_username}</p>: ""}
                 <p className="userDataDesc"><MdPeopleAlt className="userDataIcon" />-- followers <BsDot /> -- following </p>
+           </div>
+           </div>
            </div>
         }
       </div> 
