@@ -30,7 +30,6 @@ function App() {
   }
   function searchUser(){
     fetchData(searchText)
-    console.log(userData)
     toggleIsRepoButtonClicked(false)
     fetchRepoData(searchText)
   }
