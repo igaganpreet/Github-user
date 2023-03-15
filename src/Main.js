@@ -36,7 +36,7 @@ let mainMargin=(width>480)?calcMargin: "0%"
         )
         :
         <div className="Main">
-        <h1 className="name">No such user found</h1>
+//         <h1 className="name">No such user found</h1>
         </div>
         }
       </div> 
