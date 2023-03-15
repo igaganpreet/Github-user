@@ -37,14 +37,14 @@ let mainMargin=(width>480)?calcMargin: "0%"
         :
         <div className="MainDisplay">
             <div className="Main" style={{margin:mainMargin}}>
-              <img alt="profileImage" className="userImage" src="" ></img>
+              <img alt="" className="userImage" src="" ></img>
               <div className="mainUserData">
-                <h1 className="name">""</h1>
-                <h3 className="username">""</h3>
-                <p className="bio">""</p>
-                <p className="userDataDesc"><AiFillGithub className="userDataIcon" />""</p>
-                {user.location ? <p className="userDataDesc"><IoLocationSharp className="userDataIcon" />""</p>:""}
-                {user.blog ? <p className="userDataDesc"><BiLink className="userDataIcon" />""</p> : ""}
+                <h1 className="name"></h1>
+                <h3 className="username"></h3>
+                <p className="bio"></p>
+                <p className="userDataDesc"><AiFillGithub className="userDataIcon" /></p>
+                {user.location ? <p className="userDataDesc"><IoLocationSharp className="userDataIcon" /></p>:""}
+                {user.blog ? <p className="userDataDesc"><BiLink className="userDataIcon" /></p> : ""}
                 {user.twitter_username ? <p className="userDataDesc"><FiTwitter className="userDataIcon" />{user.twitter_username}</p>: ""}
                 <p className="userDataDesc"><MdPeopleAlt className="userDataIcon" />-- followers <BsDot /> -- following </p>
            </div>
