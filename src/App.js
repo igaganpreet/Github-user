@@ -4,7 +4,7 @@ import React from "react"
 
 
 function App() {
-  let [searchText,updatesearchText]=React.useState("")
+  let [searchText,updatesearchText]=React.useState("igaganpreet")
   let [userData,setUserData]=React.useState("igaganpreet")
   let [repoData, setRepoData]=React.useState("")
   let [isRepoButtonClicked, toggleIsRepoButtonClicked]=React.useState(false)
